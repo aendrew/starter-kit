@@ -1,0 +1,29 @@
+.masthead {
+  padding: 0.8em;
+  font-size: 18px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+
+  @include oGridRespondTo($until:M) {
+    font-size: 16px;
+  }
+
+  @include oGridRespondTo($until:S) {
+    font-size: 13px;
+  }
+
+}
+
+.masthead__logo {
+  padding: inherit;
+  opacity: 0.75;
+  font-size: 1em;
+
+  &:hover { opacity: 1; }
+
+  img {
+    height: 1em;
+    width: auto;
+    vertical-align: bottom;
+  }
+}

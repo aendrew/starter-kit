@@ -1,0 +1,10 @@
+.u-clearfix {
+  @include clearfix;
+}
+
+.u-hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

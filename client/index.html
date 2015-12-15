@@ -12,6 +12,7 @@
     <link rel="shortcut icon" href="https://ig.ft.com/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="//im.ft-static.com/m/icons/apple-touch-icon.png">
 
+    <link rel="subresource" href="https://h2.ft.com/polyfill/v2/polyfill.min.js" />
     <link rel="subresource" href="https://h2.ft.com/build/v2/files/o-fonts-assets@1.0.0/MetricWeb-Light.woff">
     <link rel="subresource" href="https://h2.ft.com/build/v2/files/o-fonts-assets@1.0.0/MetricWeb-Bold.woff">
     <link rel="subresource" href="https://h2.ft.com/build/v2/files/o-fonts-assets@1.0.0/FinancierDisplayWeb-Regular.woff">
@@ -67,14 +68,26 @@
       <img class="u-hidden" alt="" width="1" height="1" src="http://stats.ft.com/si/track.gif?WT.js=No">
     </noscript>
 
-    <header class="site-header" role="banner">
-      <a href="http://www.ft.com/">
-        <img class="masthead" src="https://image.webservices.ft.com/v1/images/raw/fticon:brand-ft-masthead?source=ft-interactive">
-      </a>
+    <header class="masthead" role="banner">
+      <a class="masthead__logo" href="http://www.ft.com/"><img src="https://image.webservices.ft.com/v1/images/raw/fticon:brand-ft-masthead?source=ft-interactive"></a>
     </header>
 
-    <main role="main">
-      <h1>Content goes here</h1>
+    <main class="main-content" role="main">
+
+
+      <article class="o-grid-container">
+
+        <header class="a-header o-grid-row">
+          <h1 class="a-header__headline" data-o-grid-colspan="12">Headline here</h1>
+        </header>
+
+        <div class="o-grid-row">
+          <div data-o-grid-colspan="12">
+            <p class="t--muted-2">Content here</p>
+          </div>
+        </div>
+
+      </article>
     </main>
 
     <footer class="footer" role="contentinfo">
@@ -141,6 +154,15 @@
             <div class="o-footer__col o-footer__col--full-width">
               <span>&#xA9; THE FINANCIAL TIMES LTD 2015.</span>
               <span><abbr title="Financial Times">FT</abbr> and &#x2018;Financial Times&#x2019; are trademarks of The Financial Times Ltd.</span>
+            </div>
+          </div>
+        </div>
+        <div class="o-footer__brand">
+          <div class="o-footer__container">
+            <div class="o-footer__row">
+              <div class="o-footer__col o-footer__col--full-width">
+                <div class="o-footer__brand-logo" aria-label="A Nikkei Company"></div>
+              </div>
             </div>
           </div>
         </div>

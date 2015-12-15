@@ -1,29 +1,23 @@
-@import 'n-normalize/main';
+@charset 'utf-8';
+
 @import 'o-colors/main';
+@import 'o-grid/main';
 
-$font-sans: MetricWeb, sans-serif;
-$font-serif: Georgia, serif;
-$font-display: FinancierDisplayWeb, Georgia, serif;
+@import 'config/origami';
+@import 'config/color';
+@import 'config/typography';
+@import 'config/layout';
 
-body {
-  @include oColorsFor(page, background);
+@import 'sass-utils/functions';
+@import 'sass-utils/mixins';
+@import 'sass-utils/extends';
 
-  margin: 0;
-  border: 0;
-  font-family: $font-sans;
-}
+@import 'n-normalize/main';
 
+@import 'base/document';
+@import 'base/typography';
+@import 'base/utility';
 
-.site-header {
-  padding: 18px 0 14px;
-  text-align: center;
-  border-bottom: 1px solid #e9decf;
-
-  > a {
-    opacity: 0.75;
-    &:hover { opacity: 1; }
-  }
-}
-    .masthead {
-      height: 18px;
-    }
+@import 'components/masthead/main';
+@import 'components/footer/main';
+@import 'components/article/main';

@@ -1,0 +1,69 @@
+body {
+  font-family: $t-sans;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+  font-size: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.t--XXL {
+  font-size: 45px;
+  font-kerning: normal;
+}
+
+.t--XL {
+  font-size: 40px;
+  font-kerning: normal;
+}
+
+.t--L {
+  font-size: 32px;
+  font-kerning: normal;
+}
+
+.t--M {
+  font-size: 20px;
+}
+
+.t--S {
+  font-size: 16px;
+}
+
+.t--XS {
+  font-size: 12px;
+}
+
+.t--XXS {
+  font-size: 9px;
+}
+
+.t--center {
+  text-align: center;
+}
+
+.t--right {
+  text-align: right;
+}
+
+.t--muted-1 {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.t--muted-2 {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.t--tnums {
+  @include tabular-nums;
+}

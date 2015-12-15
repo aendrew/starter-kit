@@ -1,0 +1,18 @@
+:focus {
+  outline: 1px dotted;
+  outline-offset: 1px;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: scroll;
+}
+
+body {
+  @include oColorsFor('page', 'background' 'text');
+}
+
+.main-content {
+  min-height: 444px;
+}
