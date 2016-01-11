@@ -61,8 +61,8 @@ This software is published by the Financial Times under the [MIT licence](http:/
 [travis-url]: https://travis-ci.org/ft-interactive/starter-kit
 [travis-image]: https://img.shields.io/travis/ft-interactive/starter-kit.svg?style=flat-square&label=Linux
 
-[appveyor-url]: https://ci.appveyor.com/project/callumlocke/trip
-[appveyor-image]: https://img.shields.io/appveyor/ci/callumlocke/trip/master.svg?style=flat-square&label=Windows
+[appveyor-url]: https://ci.appveyor.com/project/callumlocke/starter-kit
+[appveyor-image]: https://img.shields.io/appveyor/ci/callumlocke/starter-kit/master.svg?style=flat-square&label=Windows
 
 [depstat-url]: https://david-dm.org/ft-interactive/starter-kit
 [depstat-image]: https://img.shields.io/david/ft-interactive/starter-kit.svg?style=flat-square
