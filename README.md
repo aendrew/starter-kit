@@ -2,7 +2,8 @@
 
 > Boilerplate to kick-start a new FT Interactive project
 
-[![Build Status][travis-image]][travis-url] [![Dependency Status][devdeps-image]][devdeps-url]
+
+[![NPM version][npm-image]][npm-url] [![Linux Build Status][travis-image]][travis-url] [![Windows Build Status][appveyor-image]][appveyor-url] [![Dependency Status][depstat-image]][depstat-url] [![devDependency Status][devdepstat-image]][devdepstat-url]
 
 ## Usage
 
@@ -54,9 +55,17 @@ Other components can be added easily – see [recipes](docs/recipes/README.md).
 ## Licence
 This software is published by the Financial Times under the [MIT licence](http://opensource.org/licenses/MIT).
 
-<!-- badge URLs -->
-[travis-url]: http://travis-ci.org/ft-interactive/starter-kit
-[travis-image]: https://img.shields.io/travis/ft-interactive/starter-kit.svg?style=flat-square
 
-[devdeps-url]: https://david-dm.org/ft-interactive/starter-kit#info=devDependencies
-[devdeps-image]: https://img.shields.io/david/dev/ft-interactive/starter-kit.svg?style=flat-square
+<!-- badge URLs -->
+
+[travis-url]: https://travis-ci.org/ft-interactive/starter-kit
+[travis-image]: https://img.shields.io/travis/ft-interactive/starter-kit.svg?style=flat-square&label=Linux
+
+[appveyor-url]: https://ci.appveyor.com/project/callumlocke/trip
+[appveyor-image]: https://img.shields.io/appveyor/ci/callumlocke/trip/master.svg?style=flat-square&label=Windows
+
+[depstat-url]: https://david-dm.org/ft-interactive/starter-kit
+[depstat-image]: https://img.shields.io/david/ft-interactive/starter-kit.svg?style=flat-square
+
+[devdepstat-url]: https://david-dm.org/ft-interactive/starter-kit#info=devDependencies
+[devdepstat-image]: https://img.shields.io/david/dev/ft-interactive/starter-kit.svg?style=flat-square&label=devDeps
