@@ -12,7 +12,7 @@
     "trip-autoprefixer": "^0.0.3",
     "trip-babel": "^0.0.1",
     "trip-browserify": "^0.0.1",
-    "trip-sass": "^0.0.2"
+    "trip-sass": "^0.1.0"
   },
   "engines": {
     "node": ">=4",
