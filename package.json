@@ -8,7 +8,7 @@
     "eslint-config-xo": "^0.9.1",
     "fastclick": "^1.0.6",
     "igdeploy": "^0.1.0",
-    "trip": "^0.8.4",
+    "trip": "^0.8.5",
     "trip-autoprefixer": "^0.0.3",
     "trip-babel": "^0.0.1",
     "trip-browserify": "^0.0.1",
