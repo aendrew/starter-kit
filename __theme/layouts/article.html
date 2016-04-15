@@ -1,0 +1,12 @@
+{% import "macros/article.html" as article with context %}
+<article class="article o-grid-container" itemscope itemtype="http://schema.org/Article">
+{% call article.header() %}
+{{ article.share(share_buttons) }}
+{% endcall %}
+<div class="o-grid-row">
+  <div class="article__body" itemprop="articleBody" data-o-grid-colspan="12">
+  {% block main %}{% endblock %}
+  </div>
+</div>
+{{ article.footer() }}
+</article>

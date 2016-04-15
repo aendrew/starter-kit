@@ -1,0 +1,23 @@
+{% macro script_block(immediate=false) %}
+  {% set fn = 'exec' if immediate else 'queue' %}
+  <script {% if not immediate %}async{% endif %}>{{fn}}({ {{ caller() }} });</script>
+{% endmacro %}
+
+{% macro load_script(src, async=true, defer=true, immediate=false) %}
+  {% set fn = 'exec' if immediate else 'queue' %}
+  {% if async and defer %}
+  <script async>{{fn}}('{{src}}')</script>
+  {% else %}
+  <script {% if not immediate %}async{% endif %}>{{fn}}('{{src}}',{{ async | default('true')}},{{defer | default('true')}})</script>
+  {% endif %}
+{% endmacro %}
+
+{% macro load_script_array(array) %}
+{% for script in array %}
+  {% if _.isPlainObject(script) %}
+    {{ load_script(src=script.src, async=script.async, defer=script.defer, immediate=script.immediate) }}
+  {% elif _.isString(script) %}
+    {{ load_script(src=script) }}
+  {% endif %}
+{% endfor %}
+{% endmacro %}

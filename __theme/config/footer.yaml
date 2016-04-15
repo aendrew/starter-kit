@@ -1,0 +1,94 @@
+disabled: false
+template: footer
+sections:
+  -
+    href: http://www.ft.com
+    text: Home
+  -
+    href: http://www.ft.com/world/uk
+    text: UK
+  -
+    href: http://www.ft.com/world
+    text: World
+  -
+    href: http://www.ft.com/companies
+    text: Companies
+  -
+    href: http://www.ft.com/markets
+    text: Markets
+  -
+    href: http://www.ft.com/global-economy
+    text: Global Economy
+  -
+    href: http://www.ft.com/lex
+    text: Lex
+  -
+    href: http://www.ft.com/comment
+    text: Comment
+  -
+    href: http://www.ft.com/management
+    text: Management
+  -
+    href: http://www.ft.com/personal-finance
+    text: Personal Finance
+  -
+    href: http://www.ft.com/life-arts
+    text: Life & Arts
+
+links:
+  -
+    - Tools
+    -
+      href: http://portfolio.ft.com/
+      text: Portfolio
+    -
+      href: http://lexicon.ft.com/
+      text: Lexicon
+    -
+      href: http://www.ft.com/topics
+      text: Topics
+    -
+      href: http://markets.ft.com/alerts/keyword.asp
+      text: Alerts Hub
+    -
+      href: http://nbe.ft.com/nbe/profile.cfm?segid=70121
+      text: Daily Briefings
+  -
+    - Services
+    -
+      href: http://www.ft.com/corporate
+      text: Corporate subscriptions
+    -
+      href: http://www.ft.com/syndication
+      text: Syndication
+    -
+      href: https://www.ft-live.com/
+      text: Conferences
+  -
+    - Support
+    -
+      href: http://www.ft.com/help
+      text: Help
+    -
+      href: http://www.ft.com/aboutus
+      text: About us
+    -
+      href: http://aboutus.ft.com/careers/
+      text: Jobs
+    -
+      href: http://aboutus.ft.com/contact-us
+      text: Contact us
+  -
+    - Legal & Advertising
+    -
+      href: http://www.ft.com/advertising
+      text: Advertise with the FT
+    -
+      href: http://www.ft.com/servicestools/help/terms
+      text: Terms & conditions
+    -
+      href: http://www.ft.com/servicestools/help/privacy
+      text: Cookie & privacy policy
+    -
+      href: http://www.ft.com/servicestools/help/copyright
+      text: Copyright

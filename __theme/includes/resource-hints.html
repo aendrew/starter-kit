@@ -1,0 +1,27 @@
+{% if resource_hints and not resource_hints.disabled -%}
+
+  {% block preconnect -%}
+    {% for resource in resource_hints.preconnent -%}
+      <link rel="preconnect" href="{{resource}}">
+    {%- endfor %}
+  {%- endblock %}
+
+  {% block preload -%}
+    {% for resource in resource_hints.preload -%}
+      <link rel="preload" href="{{resource}}">
+    {%- endfor %}
+  {%- endblock %}
+
+  {% block prefetch -%}
+    {% for resource in resource_hints.prefetch -%}
+      <link rel="prefetch" href="{{resource}}">
+    {%- endfor %}
+  {%- endblock %}
+
+{%- else -%}
+
+  {% block preconnect -%}{%- endblock %}
+  {% block preload -%}{%- endblock %}
+  {% block prefetch -%}{%- endblock %}
+
+{%- endif %}

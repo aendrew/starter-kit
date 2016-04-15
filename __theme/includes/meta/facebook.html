@@ -1,0 +1,13 @@
+{% if facebook and not facebook.disabled -%}
+  {% if facebook.page_id %}
+  <meta property="fb:page_id" content="{{ facebook.page_id }}">
+  {% endif %}
+
+  {% if facebook.description or description %}
+  <meta property="og:title" content="{{ facebook.description | default(description) }}">
+  {% endif %}
+
+  {% if facebook.image_src or image_src %}
+  <meta property="og:image" content="{{ facebook.image_src | default(image_src) }}">
+  {% endif %}
+{%- endif %}

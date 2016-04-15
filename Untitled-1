@@ -1,0 +1,49 @@
+/content
+/components
+	/foo
+	/bar
+
+
+/node_modules
+	/themeA
+		/components
+			/foo
+				-includes
+				-macros
+				-tags
+				-scripts
+				-stylesheets
+				-locals
+				-layouts
+			/bar
+		/layouts
+		/macros
+		/tags
+		/filters
+
+
+--------------
+
+in project directory
+
+/themes
+	/themeA <= to override any part of node_modules/themeA just make a file with same name
+	             to extend themeB add a file the doesnt exit
+	/themeB <= some other theme: must have basic theme directory structure
+
+--------------
+
+
+/server
+	index.js
+/client
+	index.md
+	foo.html
+	somedata.csv
+	bundle.scss
+	somestyles.css
+	things.js
+	/images
+		an-image.jpg
+	/scripts
+		whatever.js

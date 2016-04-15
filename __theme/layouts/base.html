@@ -1,0 +1,57 @@
+{% import "macros/build-service.html" as build_service %}
+{% import "macros/js.html" as js %}
+{% import "macros/css.html" as css %}
+
+<!doctype html>
+<html lang="en-GB" class="core">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="{{ viewport | default('width=device-width, initial-scale=1') }}">
+{% include "includes/resource-hints.html" ignore missing %}
+{% include "includes/meta/meta.html" ignore missing %}
+{% block custom_meta_tags %}{% endblock %}
+
+<style>{% block critical_styles -%}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}html,body{background-color:{{bg_color | default('#fff1e0')}};font-family:MetricWeb,sans-serif;margin:0;padding:0;}main{display:block}.core .o--if-js,.enhanced .o--if-no-js {display: none !important;}
+{%- endblock %}</style>
+
+{% block stylesheets %}
+  {{ build_service.stylesheet() }}
+  {{ css.load_stylesheet_array(stylesheets) }}
+{% endblock %}
+
+<script>
+{% block use_enhanced %}
+window.use_enhanced = {{ use_enhanced | default("('querySelector' in document && 'localStorage' in window && 'addEventListener' in window)") | safe}};
+{% endblock %}
+</script>
+
+{% include "includes/core-js.html" %}
+{% include "includes/html5shiv.html" %}
+
+{% block head %}{% endblock %}
+</head>
+<body>
+
+{% include "includes/" + (header.template | default('header', true)) + ".html" ignore missing %}
+<main role="main">
+{% if main %}
+{% include main ignore missing %}
+{% else %}
+{% block main %}{% endblock %}
+{% endif %}
+</main>
+{% include "includes/" + (footer.template | default('footer', true)) + ".html" ignore missing %}
+
+{% include "includes/tracking/tracking.html" %}
+
+{% if polyfill_service and not polyfill_service.disabled %}
+{{ js.load_script(src=polyfill_service.url, immediate=true, async=true, defer=true) }}
+{% endif %}
+
+{% block scripts %}
+{{ js.load_script_array(scripts) }}
+{% endblock %}
+</body>
+</html>

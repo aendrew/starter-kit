@@ -1,0 +1,5 @@
+{% if google and not google.disabled -%}
+  {% if google.publisher_id %}
+  <link rel="publisher" href="{{ google.publisher_id }}">
+  {% endif %}
+{%- endif %}

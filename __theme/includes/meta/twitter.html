@@ -1,0 +1,18 @@
+{% if twitter and not twitter.disabled -%}
+<meta name="twitter:card" content="{{twitter.card | default('summary') | lower}}" />
+<meta name="twitter:site" content="{{twitter.site | default('@ft') }}" />
+<meta name="twitter:title" content="{{twitter.title | default('title')}}" />
+{#
+TODO
+- figure out pass-by-reference
+#}
+<meta name="twitter:description" content="{{twitter.description | default('description')}}" />
+{% if not twitter.no_image -%}
+<meta name="twitter:image" content="{{twitter.image | default('image_src')}}" />
+{#
+to do:
+- handle single image or array
+- use image service to ensure dimensions and size follow Twitter guidelines. 
+#}
+{%- endif %}
+{%- endif %}

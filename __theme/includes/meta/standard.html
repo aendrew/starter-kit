@@ -1,0 +1,30 @@
+<title>{{ title }}</title>
+
+{% if description -%}
+<meta name="description" content="{{ description }}">
+{%- endif %}
+
+{% if keywords and keywords.length -%}
+{# TODO: handle strings instead of arrays #}
+<meta name="keywords" content="{{ keywords | join(', ')}}">
+{%- endif %}
+
+{% if author -%}
+{# TODO: find a way to automate this if byline is set#}
+<meta name="author" content="{{ author }}">
+{%- endif %}
+
+{% if canonical_url -%}
+{# TODO: find a way to generate this #}
+<link rel="canonical" href="{{ canonical_url }}">
+{%- endif %}
+
+{% if image_src -%}
+<link rel="image_src" href="{{ image_src }}">
+{%- endif %}
+
+{% if allow_bots -%}
+<meta name="robots" content="index,follow">
+{%- endif %}
+
+<meta name="copyright" content="{{ copyright | default('Financial Times') }}">

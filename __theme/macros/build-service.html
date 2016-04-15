@@ -1,0 +1,29 @@
+{% macro js(modules, queue=true) %}
+  {% set fn = 'queue' if queue else 'exec' %}
+  <script {% if queue %}async{% endif %}>
+  {% if _.isPlainObject(modules) %}
+    {{fn}}('{{origami_build_service.base_url}}/bundles/js?modules={% for name, semver in modules -%}{{name | urlencode}}@{{semver|default('latest', true)|urlencode}}{% if not loop.last %},{% endif %}{%- endfor %}');
+  {% elif modules | absolute_url %}
+    {{fn}}('{{modules}}');
+  {% elif _.isString(modules) %}
+    {{fn}}('{{origami_build_service.base_url}}/bundles/js?modules={{modules}}');
+  {% endif %}
+  </script>
+{% endmacro %}
+
+{% macro stylesheet(modules=origami_build_service.css) %}
+  {% if modules %}
+    {% set stylesheets = modules if _.isArray(modules) else [modules] %}
+    {% for stylesheet in stylesheets %}
+      {% if _.isPlainObject(stylesheet) %}
+      <link rel="stylesheet" href="{{origami_build_service.base_url}}/bundles/css?modules={% for name, semver in stylesheet -%}
+        {{name | urlencode}}@{{semver|default('latest', true)|urlencode}}{% if not loop.last %},{% endif %}
+      {%- endfor %}">
+      {% elif stylesheet | absolute_url %}
+      <link rel="stylesheet" href="{{ stylesheet }}">
+      {% elif stylesheet %}
+      <link rel="stylesheet" href="/bundles/css?modules={{ stylesheet }}">
+      {% endif %}
+    {%- endfor %}
+  {% endif %}
+{% endmacro %}

@@ -1,0 +1,19 @@
+{% if header and not header.disabled %}
+{% import "macros/build-service.html" as build_service %}
+{{ build_service.stylesheet({'o-header': '^5'})  }}
+{{ build_service.js({'o-header':'^5'}) }}
+<header class="o-header o-header--minimal o-header--{{header.theme|default('light')}}" data-o-component="o-header">
+	<div class="o-header__container">
+		<div class="o-header__inner">
+			<div class="o-header__bottom">
+        {# TODO: add in Search once it becomes possible to implement
+                  (straddling Next and Falcon search is too much effort) #}
+				<div class="o-header__masthead-mobile">
+					<a href="{{header.homepage_href}}" title="Go to Financial Times homepage"><span>Financial Times</span></a>
+				</div>
+        {# TODO: Add in Mega Nav once it's been redesigned for Next #}
+			</div>
+		</div>
+	</div>
+</header>
+{% endif %}

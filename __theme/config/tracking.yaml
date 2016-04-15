@@ -1,0 +1,6 @@
+google_analytics:
+  id: 'UA-35229645-1'
+ft:
+  disabled: true
+  product: IG
+  is_live: true

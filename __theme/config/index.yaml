@@ -1,0 +1,74 @@
+prod: true
+draft: false
+base_url: false
+allow_bots: true
+
+wrapper: base
+layout: article
+block: main
+
+# List share buttons. They'll display in the order they appear in this list. unknown names will be ignored
+share_buttons: [twitter, facebook, linkedin]
+ 
+facebook:
+    # disabled: true
+
+    # page_id is deprecated
+    page_id: 8860325749
+
+    # App ID for ig.ft.com
+    app_id: 429755910551755
+
+twitter: 
+  # supported card types: summary, summary_large_image
+  card: summary
+  site: '@ft'
+
+  # title: 
+  # description: 
+  
+  # optional on summary.
+  # must be a squre on summary card. min dimension 120px. max size 1MB
+  # must be min dimension w-280px, h-150px. Max size 1MB
+  image: 
+
+  # even if there is an image available then dont use it
+  no_image: false  
+
+  # fall back properties so you dont need to
+  # specify these things just for twitter
+  title_fallback_property: title
+  description_fallback_property: description
+  image_fallback_property: image_src
+  
+
+google: 
+  publisher_id: https://plus.google.com/113457471429583444041/
+
+icons: 
+
+resource_hints:
+  disabled: false
+  preconnect:
+  prefetch:
+  preload:
+
+polyfill_service:
+  url: https://cdn.polyfill.io/v2/polyfill.min.js?callback=clear_queue
+
+stylesheets: 
+  - stylesheets/main.css
+
+scripts: 
+  - scripts/main.js
+
+origami_build_service:
+  base_url: https://h2.ft.com/build/v2
+  js:
+    - 
+  css:
+    - 
+      o-fonts: latest 
+      n-normalize: ^1
+    - 
+      o-grid: ^4

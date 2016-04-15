@@ -1,0 +1,13 @@
+{% macro load_stylesheet(stylesheet) %}
+  {% if _.isString(stylesheet) %}
+    <link rel="stylesheet" href="{{ stylesheet }}">
+  {% elif _.isPlainObject(stylesheet) %}
+    <link rel="stylesheet" {{ stylesheet | attributes(include=['href', 'media', 'id', 'crossorigin', 'onload', 'onerror']) }}>
+  {% endif %}
+{% endmacro %}
+
+{% macro load_stylesheet_array(stylesheets) %}
+  {% for stylesheet in stylesheets %}
+    {{ load_stylesheet(stylesheet) }}
+  {% endfor %}
+{% endmacro %}

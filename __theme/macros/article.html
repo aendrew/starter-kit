@@ -1,0 +1,39 @@
+{% macro header(headline=headline, title=title, 
+                  byline=byline,dateline=dateline) %}
+<header class="article__header">
+<h1 class="article__headline" itemprop="headline">{{headline|default(title)}}</h1>
+{% if byline %}
+<p class="article__byline">{{byline}}</p>
+{% elif dateline %}
+<p class="article__byline article__byline--dateline" itemprop="dateline">{{byline}}</p>
+{% endif %}
+{% if caller %}<div>{{caller()}}</div>{% endif %}
+</header>
+{% endmacro %}
+
+{% macro share(buttons) %}
+{% for button in buttons -%}
+{% if loop.first -%}
+<div class="article__share">
+  <div class="share">
+{%- endif %}
+{% if button == 'twitter' -%}
+    <a href="#">Share on Twitter</a>
+{%- elif button == 'linkedin' -%}
+    <a href="#">Share on LinkedIn</a>
+{%- elif button == 'facebook' -%}
+    <a href="#">Share on Facebook</a>
+{%- endif %}
+{%- if loop.last %}
+  </div>
+</div>
+{%- endif %}
+{%- endfor %}
+{% endmacro %}
+
+
+{% macro footer() %}
+<footer class="article__footer">
+
+</footer>
+{% endmacro %}
